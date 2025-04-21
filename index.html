@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job_Schedualar Project</title>
+    <script src="PriorityQueue.js"></script>
+    <script src="Script.js"></script>
+</head>
+
+<body
+    style="margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; padding: 30px;">
+
+    <div style="
+        max-width: 420px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        min-height: 100%;
+      ">
+
+        <h2 style="text-align: center; color: #333;">Job Scheduler</h2>
+        <p style="color: #666; font-size: 14px;">You must add at least 3 jobs before starting the scheduler.</p>
+
+        <label><strong>Job Name:</strong></label>
+        <input type="text" id="jobName" placeholder="e.g. Email Service"
+            style="width: 100%; padding: 10px; margin: 6px 0 15px; border-radius: 6px; border: 1px solid #ccc;" />
+
+        <label><strong>Priority:</strong></label>
+        <input type="number" id="jobPriority" placeholder="e.g. 1"
+            style="width: 100%; padding: 10px; margin: 6px 0 15px; border-radius: 6px; border: 1px solid #ccc;" />
+
+        <label><strong>Burst Time (seconds):</strong></label>
+        <input type="number" id="jobBurstTime" placeholder="e.g. 5"
+            style="width: 100%; padding: 10px; margin: 6px 0 20px; border-radius: 6px; border: 1px solid #ccc;" />
+
+        <button onclick="submitJob()"
+            style="width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+            Add Job
+        </button>
+
+        <button id="startBtn" onclick="startJobs()" disabled
+            style="width: 100%; padding: 12px; margin-top: 10px; background: #007bff; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: not-allowed;">
+            Start Scheduler
+        </button>
+
+        <h4 style="margin-top: 25px; color: #444;">Your Input:</h4>
+        <pre id="jobList"
+            style="background: #f4f4f4; padding: 15px; border-radius: 8px; min-height: 100px; max-height: 150px; overflow-y: auto;"></pre>
+
+        <h4 style="margin-top: 25px; color: #444;">Execution Output:</h4>
+        <pre id="output"
+            style="background: #f4f4f4; padding: 15px; border-radius: 8px; min-height: 100px; max-height: 200px; overflow-y: auto;"></pre>
+
+    </div>
+
+</body>
+
+</html>
